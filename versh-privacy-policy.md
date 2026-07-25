@@ -161,4 +161,6 @@ This Privacy Policy may be updated as Versh changes. The updated version will be
 
 ## Contact
 
-For privacy questions or requests, contact the developer using the contact details provided on Versh's Google Play or App Store listing.
+For privacy questions or requests, email
+[vinsho.read@gmail.com](mailto:vinsho.read@gmail.com) or visit
+[Versh Support](versh-support.md).

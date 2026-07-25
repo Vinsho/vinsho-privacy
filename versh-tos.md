@@ -1,6 +1,6 @@
 # Terms of Service
 
-Last updated: July 20, 2026
+Last updated: July 25, 2026
 
 These Terms of Service govern your use of Versh, a lyrics and songwriting notebook for Android and iOS.
 
@@ -10,7 +10,9 @@ By using Versh, you agree to these Terms. If you do not agree, do not use the ap
 
 Versh helps you write and organize lyrics, rhymes, chords, tablature, notation, recordings, imports, rehearsals, exports, and backups. Features may differ by platform, app version, device capabilities, purchase status, and service availability.
 
-Versh does not require a Versh account. Core content is stored locally unless you choose to export, share, or enable Google Drive backup.
+Versh does not require a Versh account. Core content is stored locally unless
+you choose to export, share, or enable optional Google Drive backup on Android
+or iCloud backup on iOS.
 
 ## Your Content
 
@@ -30,7 +32,11 @@ The note recognizer and tuner are creative aids and are not calibrated professio
 
 You are responsible for keeping independent backups of important work. Local data may be lost through uninstalling the app, clearing app data, device failure, operating-system behavior, file deletion, or user action.
 
-Optional Google Drive backup uses the connected Google account's hidden app-data storage. Backup availability depends on Google services, account access, connectivity, storage, authorization, and compatible Versh versions. Versh does not promise continuous synchronization or recovery in every circumstance.
+Optional cloud backup uses the connected Google account's hidden app-data
+storage on Android and Versh's private iCloud container on iOS. Backup
+availability depends on the applicable cloud service, account access,
+connectivity, storage, authorization, and compatible Versh versions. Versh
+does not promise continuous synchronization or recovery in every circumstance.
 
 Anyone who obtains an unprotected exported backup may be able to read its contents and access included recordings.
 
@@ -52,7 +58,11 @@ Premium access depends on a valid store purchase and entitlement status. Use **R
 
 ## Third-Party Services
 
-Versh relies on services that may include Google Play, Apple's App Store, Google Drive, Google Sign-In, Firebase, RevenueCat, Google ML Kit, and a third-party dictionary API. Those services are governed by their own terms and may change, become unavailable, or impose limits outside the developer's control.
+Versh relies on services that may include Google Play, Apple's App Store,
+Google Drive, iCloud, Google Sign-In, Firebase, RevenueCat, Google ML Kit, and
+a third-party dictionary API. Those services are governed by their own terms
+and may change, become unavailable, or impose limits outside the developer's
+control.
 
 ## Acceptable Use
 
@@ -61,7 +71,8 @@ You agree not to:
 - Use Versh to violate applicable law or another person's rights.
 - Import, distribute, or publish content without the necessary rights or permission.
 - Attempt to bypass purchase validation or Premium limits.
-- Interfere with Versh, Google Drive backups, analytics or diagnostics choices, purchase systems, or third-party services.
+- Interfere with Versh, cloud backups, analytics or diagnostics choices,
+  purchase systems, or third-party services.
 - Reverse engineer, modify, or redistribute Versh except where applicable law expressly permits it.
 
 ## Privacy
@@ -92,4 +103,6 @@ Sections that by their nature should continue after termination, including owner
 
 ## Contact
 
-For questions about these Terms, contact the developer using the contact details provided on Versh's Google Play or App Store listing.
+For questions about these Terms, email
+[vinsho.read@gmail.com](mailto:vinsho.read@gmail.com) or visit
+[Versh Support](versh-support.md).
