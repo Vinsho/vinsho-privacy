@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: July 20, 2026
+Last updated: July 25, 2026
 
 Versh is a local-first lyrics and songwriting notebook for Android and iOS. This Privacy Policy explains what information the app handles, how it is used, and what choices you have.
 
@@ -12,7 +12,8 @@ Versh may also process:
 
 - Images, camera captures, PDFs, and text files that you explicitly select for import.
 - Words that you explicitly request a dictionary definition for.
-- Google account identity information when you choose to connect Google Drive.
+- Google account identity information when you choose to connect Google Drive
+  backup on Android.
 - Purchase and entitlement information needed to provide Premium features.
 - Optional app usage events and optional crash diagnostics, according to your choices in Settings.
 
@@ -20,7 +21,8 @@ Versh may also process:
 
 Songs, recordings, imported content, and settings are stored locally on your device by default. Versh does not operate its own server for your songwriting content.
 
-If you uninstall Versh or clear its app data, locally stored content may be deleted unless you exported a backup or enabled Google Drive backup.
+If you uninstall Versh or clear its app data, locally stored content may be
+deleted unless you exported a backup or enabled cloud backup.
 
 ## Imports, Camera, Photos, and OCR
 
@@ -30,7 +32,9 @@ Versh may create temporary local images while reading PDFs or scans. These tempo
 
 ## Microphone and Audio
 
-Versh uses microphone access only when you start a recording or note-recognition feature. Recordings remain on your device unless you explicitly share, export, or include them in an optional Google Drive backup.
+Versh uses microphone access only when you start a recording or note-recognition
+feature. Recordings remain on your device unless you explicitly share, export,
+or include them in an optional cloud backup.
 
 Versh does not intentionally send microphone audio or recordings to analytics, diagnostics, dictionary, or purchase providers.
 
@@ -40,17 +44,35 @@ When you request a definition, Versh sends the selected word to `api.dictionarya
 
 Offline rhyme suggestions do not send lyric text to a remote service.
 
-## Google Drive Backup
+## Cloud Backup
 
-Google Drive backup is optional and available only when you choose to connect a Google account. Versh requests access only to Google Drive's hidden `appDataFolder` for app-managed backups.
+Cloud backup is optional. It uses the platform's private, app-managed storage:
 
-The app receives basic Google account information, including account identifier, display name, and email address, so it can show which account is connected. Versh does not use or store the Google profile picture.
+- On Android, Versh requests access only to Google Drive's hidden
+  `appDataFolder`. The app receives basic Google account information, including
+  account identifier, display name, and email address, so it can show which
+  account is connected. Versh does not use or store the Google profile picture.
+- On iOS, Versh stores backups in its private iCloud Drive container when you
+  enable the feature and are signed in to iCloud Drive. The backup is not shown
+  as a normal document in the Files app. Versh does not receive your Apple
+  Account email address or profile information.
 
-Drive backups may contain songs, lyrics, chords, tabs, projects, tags, snapshots, settings, chord voicings, tunings, recording metadata, and audio files. Versh keeps up to three complete backup generations and reuses unchanged audio objects to avoid duplicate uploads. The developer cannot browse your Drive backup through a Versh-operated server.
+Cloud backups may contain songs, lyrics, chords, tabs, projects, tags,
+snapshots, settings, chord voicings, tunings, recording metadata, and audio
+files. Versh keeps up to three complete backup generations and reuses unchanged
+audio objects to avoid duplicate uploads. The developer cannot browse these
+backups through a Versh-operated server.
 
 Disconnecting Google Drive stops future access but does not automatically delete existing hidden app data. You can delete that data through Google Drive's **Manage apps** settings.
 
-Google processes account and Drive information according to the [Google Privacy Policy](https://policies.google.com/privacy).
+Disabling iCloud backup in Versh stops future backup activity but does not
+automatically delete existing backup data from your iCloud storage. You can
+manage Versh's stored data and iCloud storage through Apple's system settings.
+
+Google processes account and Drive information according to the
+[Google Privacy Policy](https://policies.google.com/privacy). Apple processes
+iCloud information according to the
+[Apple Privacy Policy](https://www.apple.com/legal/privacy/).
 
 ## Usage Analytics
 
@@ -89,7 +111,8 @@ When you use system sharing or export, the destination you select receives the e
 - Local content remains until you delete it, clear app data, or uninstall Versh.
 - Archived songs remain recoverable until you choose **Delete forever**.
 - Exported files remain wherever you save or share them until deleted there.
-- Google Drive backups remain until Versh replaces older generations or you delete Versh's hidden app data through Google Drive.
+- Cloud backups remain until Versh replaces older generations or you delete the
+  app-managed data through Google Drive or iCloud.
 - Optional analytics and diagnostics are retained according to the configured Firebase retention settings and Google's applicable policies.
 - Purchase and entitlement records may be retained by RevenueCat and the app stores as needed to provide purchases, prevent fraud, and meet legal obligations.
 
@@ -99,13 +122,14 @@ Versh does not provide a Versh account, so there is no separate Versh account to
 
 You can:
 
-- Use Versh without enabling analytics, diagnostics, or Google Drive backup.
+- Use Versh without enabling analytics, diagnostics, or cloud backup.
 - Change analytics and diagnostics choices under **Settings > Privacy**.
 - Manage microphone, camera, and photo access through system settings.
 - Delete songs and recordings in Versh.
 - Clear local app data or uninstall Versh.
 - Export a local backup before deleting local data.
-- Disconnect Google Drive and separately delete hidden Versh data from Google Drive.
+- Disconnect Google Drive or disable iCloud backup, and separately manage or
+  delete Versh's stored backup data through the applicable provider.
 - Manage or cancel subscriptions through Google Play or Apple's App Store.
 - Contact the developer to exercise privacy rights available under applicable law, including access, correction, deletion, restriction, objection, or withdrawal of consent.
 
@@ -113,7 +137,10 @@ Withdrawing consent does not affect processing that occurred before withdrawal.
 
 ## International Processing
 
-Google, RevenueCat, app stores, and other service providers may process information in countries other than your own. Their processing and transfer safeguards are governed by their own terms, privacy policies, and applicable data-protection agreements.
+Google, Apple, RevenueCat, app stores, and other service providers may process
+information in countries other than your own. Their processing and transfer
+safeguards are governed by their own terms, privacy policies, and applicable
+data-protection agreements.
 
 ## Children's Privacy
 
@@ -121,7 +148,12 @@ Versh is intended for a general audience and is not specifically directed to chi
 
 ## Security
 
-Versh uses mobile-platform storage, permissions, Google OAuth, and provider security controls. Google Drive backup data is transferred using encrypted network connections and stored in the connected account's private app-data area. No storage or transmission method is perfectly secure, so you should keep your own exports of important work.
+Versh uses mobile-platform storage, permissions, provider authentication, and
+provider security controls. Google Drive backup data is stored in the connected
+account's private app-data area. iOS backup data is stored in Versh's private
+iCloud container. Cloud providers transfer backup data using encrypted network
+connections. No storage or transmission method is perfectly secure, so you
+should keep your own exports of important work.
 
 ## Changes to This Policy
 
