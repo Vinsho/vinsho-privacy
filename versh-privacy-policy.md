@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: July 25, 2026
+Last updated: September 11, 2026
 
 Versh is a local-first lyrics and songwriting notebook for Android and iOS. This Privacy Policy explains what information the app handles, how it is used, and what choices you have.
 
@@ -15,7 +15,7 @@ Versh may also process:
 - Google account identity information when you choose to connect Google Drive
   backup on Android.
 - Purchase and entitlement information needed to provide Premium features.
-- Optional app usage events and optional crash diagnostics, according to your choices in Settings.
+- App usage events and crash diagnostics. Starting with version 0.1.3, collection is enabled by default, while previously saved opt-outs remain honored. Earlier versions with telemetry controls collect according to the choices made in those versions.
 
 ## Local Storage
 
@@ -76,19 +76,19 @@ iCloud information according to the
 
 ## Usage Analytics
 
-Versh uses Firebase Analytics only if you enable **Usage analytics**. Collection defaults to off.
+Versh uses Firebase Analytics to understand app usage and improve the app. Starting with version 0.1.3, collection is enabled by default for new installations and installations where no telemetry choice was previously made. A previously saved analytics opt-out remains honored on upgrade; the default policy is not recorded as an affirmative consent decision.
 
-Optional analytics events may include app screens, feature actions, editor tool usage, backup outcomes, purchase-flow outcomes, app version, device type, operating system version, approximate region, session information, and event timestamps. Versh does not intentionally send lyrics, song titles, recordings, imported documents, chord content, tag names, or project names to Firebase Analytics.
+Analytics events may include app screens, feature actions, editor tool usage, backup outcomes, purchase-flow outcomes, app version, device type, operating system version, approximate region, session information, and event timestamps. Versh does not intentionally send lyrics, song titles, recordings, imported documents, chord content, tag names, or project names to Firebase Analytics.
 
-You can disable analytics at any time under **Settings > Privacy**. Disabling collection stops future analytics events and resets analytics data stored by the app on the device.
+Version 0.1.3 and later do not provide an in-app analytics switch or consent prompt. Earlier versions that include **Settings > Privacy** allow you to disable analytics there. When a saved opt-out applies, Versh disables future collection and resets analytics data stored by the app on the device. Clearing app data or reinstalling may remove the saved choice, in which case the current version's defaults apply.
 
 ## Crash Diagnostics
 
-Versh uses Firebase Crashlytics only if you enable **Crash diagnostics**. Collection defaults to off.
+Versh uses Firebase Crashlytics to diagnose crashes and technical failures. Starting with version 0.1.3, collection is enabled by default for new installations and installations where no telemetry choice was previously made. A previously saved diagnostics opt-out remains honored on upgrade.
 
 Crash reports may include stack traces, app and operating-system versions, device model, current app screen, Premium status, active song count, and technical logs related to the failure. Versh does not intentionally include songwriting content in crash reports.
 
-You can disable crash diagnostics at any time under **Settings > Privacy**. Versh deletes unsent local crash reports when diagnostics are disabled.
+Version 0.1.3 and later do not provide an in-app diagnostics switch or consent prompt. Earlier versions that include **Settings > Privacy** allow you to disable diagnostics there. Versh deletes unsent local crash reports when a saved diagnostics opt-out applies. Clearing app data or reinstalling may remove the saved choice.
 
 Firebase services are provided by Google and are subject to the [Google Privacy Policy](https://policies.google.com/privacy).
 
@@ -102,7 +102,7 @@ Payments are processed by Google Play or Apple's App Store. Versh does not recei
 
 Versh does not sell personal data and does not display third-party advertising.
 
-Limited information is shared with service providers only as needed for features you use, optional analytics or diagnostics you enable, purchase management, app distribution, legal compliance, or security. Songwriting content is not intentionally shared with Firebase Analytics, Firebase Crashlytics, RevenueCat, or the dictionary service.
+Limited information is shared with service providers for features you use, analytics and diagnostics as described above, purchase management, app distribution, legal compliance, or security. Songwriting content is not intentionally shared with Firebase Analytics, Firebase Crashlytics, RevenueCat, or the dictionary service.
 
 When you use system sharing or export, the destination you select receives the exported content under that destination's own terms and privacy practices.
 
@@ -113,7 +113,7 @@ When you use system sharing or export, the destination you select receives the e
 - Exported files remain wherever you save or share them until deleted there.
 - Cloud backups remain until Versh replaces older generations or you delete the
   app-managed data through Google Drive or iCloud.
-- Optional analytics and diagnostics are retained according to the configured Firebase retention settings and Google's applicable policies.
+- Analytics and diagnostics are retained according to the configured Firebase retention settings and Google's applicable policies.
 - Purchase and entitlement records may be retained by RevenueCat and the app stores as needed to provide purchases, prevent fraud, and meet legal obligations.
 
 Versh does not provide a Versh account, so there is no separate Versh account to delete. To request information or deletion relating to data under the developer's control, contact the developer using the contact details on Versh's store listing.
@@ -122,8 +122,8 @@ Versh does not provide a Versh account, so there is no separate Versh account to
 
 You can:
 
-- Use Versh without enabling analytics, diagnostics, or cloud backup.
-- Change analytics and diagnostics choices under **Settings > Privacy**.
+- Use Versh without enabling cloud backup.
+- Keep previously saved analytics and diagnostics opt-outs when upgrading without clearing app data. Version 0.1.3 and later have no in-app telemetry controls; earlier versions with **Settings > Privacy** retain their version-specific controls.
 - Manage microphone, camera, and photo access through system settings.
 - Delete songs and recordings in Versh.
 - Clear local app data or uninstall Versh.
