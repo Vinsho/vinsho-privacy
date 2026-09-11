@@ -28,6 +28,8 @@ deleted unless you exported a backup or enabled cloud backup.
 
 When you choose a file, photo, or camera scan, Versh processes it to extract lyrics, chords, or tablature. OCR uses Google ML Kit's on-device text recognition. Selected content is used only for the import you start and is not sent to Firebase Analytics or RevenueCat.
 
+ML Kit does not send the input images or recognized text to Google servers, but its SDK sends technical usage and diagnostic information, such as installation identifiers, app/device metadata, feature usage, processing latency, and error codes. Google uses this information for diagnostics, usage analysis, and improving its services under the [ML Kit terms](https://developers.google.com/ml-kit/terms). Versh's saved Firebase analytics or Crashlytics opt-outs do not control ML Kit's separate SDK telemetry.
+
 Versh may create temporary local images while reading PDFs or scans. These temporary files are not intended to be retained as part of your library after processing.
 
 ## Microphone and Audio
@@ -40,9 +42,9 @@ Versh does not intentionally send microphone audio or recordings to analytics, d
 
 ## Dictionary Lookups
 
-When you request a definition, Versh sends the selected word to `api.dictionaryapi.dev`. Versh does not send the surrounding lyric line or full song. The service may receive ordinary network information such as your IP address and request time under its own practices.
+Current versions provide definitions, synonyms, and rhymes from bundled or downloaded offline language packs. These lookups do not send selected words or lyric text to a remote service. When you browse or download language packs, the catalog and download hosts receive ordinary network information such as your IP address, request time, and the requested pack URL.
 
-Offline rhyme suggestions do not send lyric text to a remote service.
+Earlier versions that use `api.dictionaryapi.dev` send the selected word when you request a definition, but not the surrounding lyric line or full song. That service may receive ordinary network information under its own practices.
 
 ## Cloud Backup
 
@@ -60,8 +62,7 @@ Cloud backup is optional. It uses the platform's private, app-managed storage:
 Cloud backups may contain songs, lyrics, chords, tabs, projects, tags,
 snapshots, settings, chord voicings, tunings, recording metadata, and audio
 files. Versh keeps up to three complete backup generations and reuses unchanged
-audio objects to avoid duplicate uploads. The developer cannot browse these
-backups through a Versh-operated server.
+audio objects to avoid duplicate uploads. Backup manifests also contain a locally generated device identifier, device hostname, app version, and technical metadata needed to distinguish and restore generations. After you connect Drive backup, Versh can synchronize changes automatically as well as when you request a manual backup. Backups use encrypted network transport, but Versh does not apply end-to-end encryption to the backup payload. The developer cannot browse these backups through a Versh-operated server.
 
 Disconnecting Google Drive stops future access but does not automatically delete existing hidden app data. You can delete that data through Google Drive's **Manage apps** settings.
 
@@ -78,7 +79,9 @@ iCloud information according to the
 
 Versh uses Firebase Analytics to understand app usage and improve the app. Starting with version 0.1.3, collection is enabled by default for new installations and installations where no telemetry choice was previously made. A previously saved analytics opt-out remains honored on upgrade; the default policy is not recorded as an affirmative consent decision.
 
-Analytics events may include app screens, feature actions, editor tool usage, backup outcomes, purchase-flow outcomes, app version, device type, operating system version, approximate region, session information, and event timestamps. Versh does not intentionally send lyrics, song titles, recordings, imported documents, chord content, tag names, or project names to Firebase Analytics.
+Analytics events may include app screens, feature actions, editor tool usage, backup outcomes, purchase-flow outcomes, app version, device type, operating system version, approximate region derived from IP addresses, session information, and event timestamps. The SDK also uses app-instance identifiers and, where available, the Android advertising identifier, and records in-app purchase/subscription events. Versh does not intentionally send lyrics, song titles, recordings, imported documents, chord content, tag names, or project names to Firebase Analytics.
+
+Versh links Analytics with Google Ads to measure acquisition campaigns, including installation, activation, and purchase conversions. Google Ads personalization and Analytics sharing with Google products and services are enabled. Consequently, Google may also use eligible Analytics data for its products and advertising services under its applicable policies; Analytics is not used solely as a developer-directed service provider. Versh itself does not display third-party advertisements. Google Signals is currently disabled.
 
 Version 0.1.3 and later do not provide an in-app analytics switch or consent prompt. Earlier versions that include **Settings > Privacy** allow you to disable analytics there. When a saved opt-out applies, Versh disables future collection and resets analytics data stored by the app on the device. Clearing app data or reinstalling may remove the saved choice, in which case the current version's defaults apply.
 
@@ -86,7 +89,7 @@ Version 0.1.3 and later do not provide an in-app analytics switch or consent pro
 
 Versh uses Firebase Crashlytics to diagnose crashes and technical failures. Starting with version 0.1.3, collection is enabled by default for new installations and installations where no telemetry choice was previously made. A previously saved diagnostics opt-out remains honored on upgrade.
 
-Crash reports may include stack traces, app and operating-system versions, device model, current app screen, Premium status, active song count, and technical logs related to the failure. Versh does not intentionally include songwriting content in crash reports.
+Crash reports may include stack traces, app and operating-system versions, device model, current app screen, Premium status, active song count, technical logs related to the failure, and installation identifiers used to distinguish affected app installations. Linked Firebase Analytics may also receive an automatic app-exception event when a crash occurs. Versh does not intentionally include songwriting content in crash reports.
 
 Version 0.1.3 and later do not provide an in-app diagnostics switch or consent prompt. Earlier versions that include **Settings > Privacy** allow you to disable diagnostics there. Versh deletes unsent local crash reports when a saved diagnostics opt-out applies. Clearing app data or reinstalling may remove the saved choice.
 
@@ -94,7 +97,7 @@ Firebase services are provided by Google and are subject to the [Google Privacy 
 
 ## Purchases
 
-Versh uses RevenueCat to manage Premium products and entitlement status. RevenueCat may process an app user identifier, product identifiers, entitlement status, purchase and transaction status, app/device information, and related purchase metadata.
+Versh uses RevenueCat to manage Premium products and entitlement status. RevenueCat may process an app user identifier, product identifiers, entitlement status, purchase and transaction status, app/device information, and related purchase metadata. The SDK initializes and checks entitlements at app startup, not only when you make a purchase. It generates a pseudonymous app user identifier when no explicit identifier is supplied; this does not create a named Versh account. RevenueCat collection is separate from Firebase telemetry preferences.
 
 Payments are processed by Google Play or Apple's App Store. Versh does not receive your complete payment-card details. Purchases are subject to the relevant store's terms and privacy practices. RevenueCat processes information according to its [Privacy Policy](https://www.revenuecat.com/privacy/).
 
@@ -116,7 +119,7 @@ When you use system sharing or export, the destination you select receives the e
 - Analytics and diagnostics are retained according to the configured Firebase retention settings and Google's applicable policies.
 - Purchase and entitlement records may be retained by RevenueCat and the app stores as needed to provide purchases, prevent fraud, and meet legal obligations.
 
-Versh does not provide a Versh account, so there is no separate Versh account to delete. To request information or deletion relating to data under the developer's control, contact the developer using the contact details on Versh's store listing.
+Versh does not provide a Versh account, so there is no separate Versh account to delete. To request information or deletion relating to data under the developer's control, email [vinsho.read@gmail.com](mailto:vinsho.read@gmail.com) with the subject **Versh data deletion** and describe the data you want deleted. Do not send lyrics, recordings, passwords, or payment-card details. The developer may ask for limited additional information needed to locate the relevant records. Some pseudonymous analytics records may not be identifiable from an email address alone. Purchase records may need to be retained for legal obligations. Use the local-content and cloud-provider deletion controls described above for data stored on your device or in your own backup account.
 
 ## Your Choices and Rights
 
