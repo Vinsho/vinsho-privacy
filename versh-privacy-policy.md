@@ -1,12 +1,12 @@
 # Privacy Policy
 
-Last updated: September 11, 2026
+Last updated: September 15, 2026
 
 Versh is a local-first lyrics and songwriting notebook for Android and iOS. This Privacy Policy explains what information the app handles, how it is used, and what choices you have.
 
 ## Information Versh Handles
 
-Versh stores content you create or import, including song titles, lyrics, sections, chords, tablature, notation, projects, tags, snapshots, custom chord voicings, guitar tunings, settings, and voice or melody recordings.
+Versh stores content you create or import, including song titles, lyrics, sections, chords, tablature, notation, projects, tags, snapshots, custom chord voicings, guitar tunings, settings, voice or melody recordings, and section video recordings.
 
 Versh may also process:
 
@@ -32,13 +32,18 @@ ML Kit does not send the input images or recognized text to Google servers, but 
 
 Versh may create temporary local images while reading PDFs or scans. These temporary files are not intended to be retained as part of your library after processing.
 
-## Microphone and Audio
+## Microphone, Camera, Audio, and Video
 
-Versh uses microphone access only when you start a recording or note-recognition
-feature. Recordings remain on your device unless you explicitly share, export,
-or include them in an optional cloud backup.
+Versh uses microphone access only when you start an audio recording,
+note-recognition feature, or section video recording. It uses camera access only
+when you explicitly open section video capture. The camera preview and selected
+section lyrics or chords are displayed together for reference, but the lyrics
+and chords are not burned into the captured video.
 
-Versh does not intentionally send microphone audio or recordings to analytics, diagnostics, dictionary, or purchase providers.
+Audio and video recordings remain on your device unless you explicitly share,
+export, or include them in an optional backup. Versh does not intentionally send
+camera imagery, microphone audio, or recordings to analytics, diagnostics,
+dictionary, or purchase providers.
 
 ## Dictionary Lookups
 
@@ -60,9 +65,9 @@ Cloud backup is optional. It uses the platform's private, app-managed storage:
   Account email address or profile information.
 
 Cloud backups may contain songs, lyrics, chords, tabs, projects, tags,
-snapshots, settings, chord voicings, tunings, recording metadata, and audio
-files. Versh keeps up to three complete backup generations and reuses unchanged
-audio objects to avoid duplicate uploads. Backup manifests also contain a locally generated device identifier, device hostname, app version, and technical metadata needed to distinguish and restore generations. After you connect Drive backup, Versh can synchronize changes automatically as well as when you request a manual backup. Backups use encrypted network transport, but Versh does not apply end-to-end encryption to the backup payload. The developer cannot browse these backups through a Versh-operated server.
+snapshots, settings, chord voicings, tunings, recording metadata, audio files,
+and section video files. Versh keeps up to three complete backup generations
+and reuses unchanged media objects to avoid duplicate uploads. Backup manifests also contain a locally generated device identifier, device hostname, app version, and technical metadata needed to distinguish and restore generations. After you connect Drive backup, Versh can synchronize changes automatically as well as when you request a manual backup. Backups use encrypted network transport, but Versh does not apply end-to-end encryption to the backup payload. The developer cannot browse these backups through a Versh-operated server.
 
 Disconnecting Google Drive stops future access but does not automatically delete existing hidden app data. You can delete that data through Google Drive's **Manage apps** settings.
 
