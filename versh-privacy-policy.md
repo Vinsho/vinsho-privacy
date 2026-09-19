@@ -1,8 +1,10 @@
 # Privacy Policy
 
-Last updated: September 15, 2026
+Last updated: September 19, 2026
 
 Versh is a local-first lyrics and songwriting notebook for Android and iOS. This Privacy Policy explains what information the app handles, how it is used, and what choices you have.
+
+Features and data handling depend on your platform, app version, and settings. The in-app advertising section applies to builds where advertising is enabled; earlier or ad-disabled builds do not request in-app advertisements.
 
 ## Information Versh Handles
 
@@ -15,6 +17,7 @@ Versh may also process:
 - Google account identity information when you choose to connect Google Drive
   backup on Android.
 - Purchase and entitlement information needed to provide Premium features.
+- In ad-supported builds, technical advertising information and advertising privacy choices, as described under **In-App Advertising and Advertising Privacy** below.
 - App usage events and crash diagnostics. Starting with version 0.1.3, collection is enabled by default, while previously saved opt-outs remain honored. Earlier versions with telemetry controls collect according to the choices made in those versions.
 
 ## Local Storage
@@ -26,7 +29,7 @@ deleted unless you exported a backup or enabled cloud backup.
 
 ## Imports, Camera, Photos, and OCR
 
-When you choose a file, photo, or camera scan, Versh processes it to extract lyrics, chords, or tablature. OCR uses Google ML Kit's on-device text recognition. Selected content is used only for the import you start and is not sent to Firebase Analytics or RevenueCat.
+When you choose a file, photo, or camera scan, Versh processes it to extract lyrics, chords, or tablature. OCR uses Google ML Kit's on-device text recognition. Selected content is used only for the import you start and is not sent by Versh to Firebase Analytics, RevenueCat, or advertising providers.
 
 ML Kit does not send the input images or recognized text to Google servers, but its SDK sends technical usage and diagnostic information, such as installation identifiers, app/device metadata, feature usage, processing latency, and error codes. Google uses this information for diagnostics, usage analysis, and improving its services under the [ML Kit terms](https://developers.google.com/ml-kit/terms). Versh's saved Firebase analytics or Crashlytics opt-outs do not control ML Kit's separate SDK telemetry.
 
@@ -43,7 +46,7 @@ and chords are not burned into the captured video.
 Audio and video recordings remain on your device unless you explicitly share,
 export, or include them in an optional backup. Versh does not intentionally send
 camera imagery, microphone audio, or recordings to analytics, diagnostics,
-dictionary, or purchase providers.
+dictionary, advertising, consent-management, or purchase providers.
 
 ## Dictionary Lookups
 
@@ -84,9 +87,9 @@ iCloud information according to the
 
 Versh uses Firebase Analytics to understand app usage and improve the app. Starting with version 0.1.3, collection is enabled by default for new installations and installations where no telemetry choice was previously made. A previously saved analytics opt-out remains honored on upgrade; the default policy is not recorded as an affirmative consent decision.
 
-Analytics events may include app screens, feature actions, editor tool usage, backup outcomes, purchase-flow outcomes, app version, device type, operating system version, approximate region derived from IP addresses, session information, and event timestamps. The SDK also uses app-instance identifiers and, where available, the Android advertising identifier, and records in-app purchase/subscription events. Versh does not intentionally send lyrics, song titles, recordings, imported documents, chord content, tag names, or project names to Firebase Analytics.
+Analytics events may include app screens, feature actions, editor tool usage, backup outcomes, purchase-flow outcomes, app version, device type, operating system version, approximate region derived from IP addresses, session information, and event timestamps. The SDK also uses app-instance identifiers and records in-app purchase/subscription events. Earlier Android builds may access the Android advertising identifier where available. Ad-supported Android builds omit the advertising-ID permission, as described below. Versh does not intentionally send lyrics, song titles, recordings, imported documents, chord content, tag names, or project names to Firebase Analytics.
 
-Versh links Analytics with Google Ads to measure acquisition campaigns, including installation, activation, and purchase conversions. Google Ads personalization and Analytics sharing with Google products and services are enabled. Consequently, Google may also use eligible Analytics data for its products and advertising services under its applicable policies; Analytics is not used solely as a developer-directed service provider. Versh itself does not display third-party advertisements. Google Signals is currently disabled.
+Versh links Analytics with Google Ads to measure acquisition campaigns, including installation, activation, and purchase conversions. Google Ads personalization and Analytics sharing with Google products and services are enabled. Consequently, Google may also use eligible Analytics data for its products and advertising services under its applicable policies; Analytics is not used solely as a developer-directed service provider. This acquisition measurement is separate from the in-app AdMob advertising described below. Google Signals is currently disabled.
 
 Version 0.1.3 and later do not provide an in-app analytics switch or consent prompt. Earlier versions that include **Settings > Privacy** allow you to disable analytics there. When a saved opt-out applies, Versh disables future collection and resets analytics data stored by the app on the device. Clearing app data or reinstalling may remove the saved choice, in which case the current version's defaults apply.
 
@@ -100,6 +103,47 @@ Version 0.1.3 and later do not provide an in-app diagnostics switch or consent p
 
 Firebase services are provided by Google and are subject to the [Google Privacy Policy](https://policies.google.com/privacy).
 
+## In-App Advertising and Advertising Privacy
+
+### When advertisements are shown
+
+In ad-supported builds, free users may see Google AdMob full-screen advertisements at eligible screen changes. Ads are not displayed on app launch or while writing, recording, playing recordings, or rehearsing. Premium removes these in-app ads. Versh does not use your lyrics or other songwriting content to select advertisements.
+
+Versh requests **non-personalized ads** rather than ads selected from your interests or activity across other apps and websites. Non-personalized does **not** mean anonymous or data-free: advertising can still involve technical identifiers, approximate location, device storage, measurement, and fraud-prevention processing. Depending on the applicable requirements and privacy choices, Google may allow non-personalized or limited ads, or ads may not be requested.
+
+### Advertising and consent information
+
+Google's Mobile Ads SDK, User Messaging Platform (UMP), and participating advertising providers may process information such as:
+
+- Your IP address and an approximate location inferred from it. Versh does not request precise GPS location for advertising.
+- App and device information, such as app identifiers and version, device type, operating-system version, language, and network information.
+- App-, device-, or developer-scoped technical identifiers, such as Android app set IDs, subject to platform restrictions and the configuration described below.
+- Ad requests, impressions, taps, video-ad views, and related interaction or attribution information. These concern advertising interactions, not the contents of your audio or video recordings.
+- SDK performance and diagnostic information, such as load failures, app launch time, hangs, and energy usage. Versh disables the Mobile Ads SDK's separate iOS crash reporter; this does not disable other SDK diagnostics or Firebase Crashlytics.
+- Consent status, opt-out choices, and related privacy signals needed to select the applicable privacy message and apply your choices.
+
+This information is used to deliver and measure advertising, operate consent controls, maintain service performance, and detect fraud or abuse. Google may share relevant information with advertising participants for these purposes under its policies and the applicable privacy choices.
+
+Versh does not add lyrics, song titles, lookup words, recordings, imported documents, filenames, song or section identifiers, tag names, or project names to ad requests or consent messages. Advertising does not give advertisers access to your songwriting library or cloud backups.
+
+In ad-supported Android builds, Versh removes the Android `AD_ID` permission instead of requesting access to the Android advertising identifier. On iOS, Versh does not request App Tracking Transparency authorization or access to IDFA. The iOS integration supports Apple's SKAdNetwork attribution mechanism without obtaining IDFA. These restrictions do not eliminate all technical identifiers, network data, or advertising measurement.
+
+### Consent and privacy choices
+
+In ad-supported builds, Versh uses Google's UMP to refresh advertising consent information before requesting ads. Where applicable, a European regulations message provides consent choices for the EEA, UK, and Switzerland; a US state regulations message provides applicable opt-out choices. The message you receive depends on your region and the requirements determined by UMP. Consent messages and choices are processed by Google and may be communicated to participating advertising providers so they can apply them.
+
+When UMP requires a privacy-options entry point, Versh displays **Settings > Ad privacy**. Use it to review or change available choices, including withdrawing consent or exercising applicable advertising opt-outs. These controls can remain available after upgrading to Premium. If consent status cannot be checked successfully, or UMP does not permit an ad request, Versh skips ads rather than blocking your writing.
+
+Advertising consent is **separate** from Firebase Analytics and Crashlytics collection, ML Kit SDK telemetry, RevenueCat purchase processing, and optional backups. Ad privacy choices do not change those services' settings or automatically disable them. In particular, current versions' Firebase defaults and previously saved opt-outs continue to work as described in **Usage Analytics** and **Crash Diagnostics**.
+
+Premium stops new in-app ad requests and discards preloaded ads after the entitlement is recognized. UMP may still refresh the availability of existing privacy choices or display the privacy-options form when you request it. Premium does not disable other services described in this policy or delete information already processed by providers.
+
+### Advertising storage and further information
+
+Versh stores first-use and last-ad-attempt timestamps locally to enforce its advertising grace period and cooldown. These timestamps are not sent through Versh's analytics events or included in Versh song backups. UMP and advertising SDKs may separately store consent choices and technical information on the device. Clearing app data or uninstalling removes local app data but does not necessarily delete information already received by Google or other providers.
+
+For information about Google's processing, see the [Google Privacy Policy](https://policies.google.com/privacy) and [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites).
+
 ## Purchases
 
 Versh uses RevenueCat to manage Premium products and entitlement status. RevenueCat may process an app user identifier, product identifiers, entitlement status, purchase and transaction status, app/device information, and related purchase metadata. The SDK initializes and checks entitlements at app startup, not only when you make a purchase. It generates a pseudonymous app user identifier when no explicit identifier is supplied; this does not create a named Versh account. RevenueCat collection is separate from Firebase telemetry preferences.
@@ -108,9 +152,11 @@ Payments are processed by Google Play or Apple's App Store. Versh does not recei
 
 ## Data Sharing
 
-Versh does not sell personal data and does not display third-party advertising.
+Versh does not sell or license your songwriting content to advertisers. Limited information is disclosed for features you use, analytics and diagnostics, advertising and consent management in ad-supported builds, purchase management, app distribution, legal compliance, or security, as described in the relevant sections above.
 
-Limited information is shared with service providers for features you use, analytics and diagnostics as described above, purchase management, app distribution, legal compliance, or security. Songwriting content is not intentionally shared with Firebase Analytics, Firebase Crashlytics, RevenueCat, or the dictionary service.
+Versh does not intentionally provide your songwriting library to Firebase Analytics, Firebase Crashlytics, RevenueCat, or advertising providers. Offline writing-tool lookups remain local; the selected-word disclosure for older online dictionary features is described under **Dictionary Lookups**.
+
+Some privacy laws define the sale or sharing of personal information broadly, including certain advertising-related disclosures even when no money changes hands. Advertising and Google Analytics/Google Ads processing should not be understood as a blanket promise of no such sharing. Where applicable, use the advertising privacy choices described above or contact the developer to exercise your rights.
 
 When you use system sharing or export, the destination you select receives the exported content under that destination's own terms and privacy practices.
 
@@ -122,6 +168,7 @@ When you use system sharing or export, the destination you select receives the e
 - Cloud backups remain until Versh replaces older generations or you delete the
   app-managed data through Google Drive or iCloud.
 - Analytics and diagnostics are retained according to the configured Firebase retention settings and Google's applicable policies.
+- Local advertising-frequency timestamps and SDK privacy preferences remain until cleared by the app or SDK, or removed with local app data. Google and participating advertising providers retain advertising, consent, diagnostic, and fraud-prevention records according to their policies and applicable requirements; changing a choice does not automatically delete previously collected records.
 - Purchase and entitlement records may be retained by RevenueCat and the app stores as needed to provide purchases, prevent fraud, and meet legal obligations.
 
 Versh does not provide a Versh account, so there is no separate Versh account to delete. To request information or deletion relating to data under the developer's control, email [vinsho.read@gmail.com](mailto:vinsho.read@gmail.com) with the subject **Versh data deletion** and describe the data you want deleted. Do not send lyrics, recordings, passwords, or payment-card details. The developer may ask for limited additional information needed to locate the relevant records. Some pseudonymous analytics records may not be identifiable from an email address alone. Purchase records may need to be retained for legal obligations. Use the local-content and cloud-provider deletion controls described above for data stored on your device or in your own backup account.
@@ -132,12 +179,13 @@ You can:
 
 - Use Versh without enabling cloud backup.
 - Keep previously saved analytics and diagnostics opt-outs when upgrading without clearing app data. Version 0.1.3 and later have no in-app telemetry controls; earlier versions with **Settings > Privacy** retain their version-specific controls.
+- In ad-supported builds, review or change advertising choices through **Settings > Ad privacy** when that entry is required and available, including applicable consent withdrawal and opt-out choices. You can also contact the developer about privacy rights.
+- Use Premium without in-app advertisements; this does not disable the other services described in this policy.
 - Manage microphone, camera, and photo access through system settings.
 - Delete songs and recordings in Versh.
 - Clear local app data or uninstall Versh.
 - Export a local backup before deleting local data.
-- Disconnect Google Drive or disable iCloud backup, and separately manage or
-  delete Versh's stored backup data through the applicable provider.
+- On Android, disconnect Google Drive backup; on iOS, disable iCloud backup. Separately manage or delete stored backup data through the applicable provider.
 - Manage or cancel subscriptions through Google Play or Apple's App Store.
 - Contact the developer to exercise privacy rights available under applicable law, including access, correction, deletion, restriction, objection, or withdrawal of consent.
 
@@ -145,7 +193,7 @@ Withdrawing consent does not affect processing that occurred before withdrawal.
 
 ## International Processing
 
-Google, Apple, RevenueCat, app stores, and other service providers may process
+Google, Apple, RevenueCat, participating advertising providers, app stores, and other service providers may process
 information in countries other than your own. Their processing and transfer
 safeguards are governed by their own terms, privacy policies, and applicable
 data-protection agreements.
