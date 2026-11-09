@@ -34,7 +34,9 @@ Classling does not send student names, grades, notes, photos or other classroom 
 
 ## Advertising, analytics and support
 
-Current Classling builds do not serve advertisements or send general app-usage analytics or crash reports through the app's analytics and error-reporting integrations. This does not disable purchase processing, backup-provider processing, or diagnostics independently managed by your operating system or app store. The class analytics feature calculates classroom statistics locally.
+Classling does not serve advertisements. Android release builds use Google Analytics for Firebase to understand app usage (such as screen visits and purchase actions) and Firebase Crashlytics to diagnose crashes and errors. These services process app-instance or installation identifiers, app and device information, usage events and technical diagnostics. Advertising identifier collection and advertising personalization are disabled. Debug and isolated QA builds do not enable this reporting.
+
+Classling does not attach student names, classroom identifiers, grades, notes, photos, imported files or account details to analytics events or app-reported errors. Screen events use fixed route templates. App-reported errors include the error type and stack trace; free-text exception messages and contextual record values are removed. Firebase may also collect native crash diagnostics and basic device information. The class analytics feature calculates classroom statistics locally. See [Firebase privacy information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
 If you contact support, the developer receives your email address, message and any attachments you choose to send. Support actions do not automatically attach classroom records or diagnostic files. Please avoid sending student information unless necessary and authorized. Opening external links, including these documents on GitHub, exposes ordinary browsing information to the destination under its own policies.
 
