@@ -1,12 +1,12 @@
 # Classling Terms of Service
 
-Last updated: November 9, 2026
+Last updated: November 11, 2026
 
 These Terms govern your use of Classling (also known as Class Ledger), a classroom management app provided by Vinsho. By using the app, you agree to these Terms. If you do not agree, do not use it. Mandatory consumer rights remain unaffected.
 
 ## The app
 
-Classling helps you manage classes, students, assignments, grades, attendance, groups, seating plans, notes, imports, reports and backups. Features depend on platform, version, device capabilities, purchase status and service availability. No separate Classling account is required.
+Classling helps you manage classes, students, assignments, grades, attendance, groups, seating plans, notes, imports, reports, backups and optional Google Drive sync. Features depend on platform, version, device capabilities, purchase status and service availability. No separate Classling account is required.
 
 You receive a limited, non-exclusive right to use the app for its intended purpose, subject to these Terms and the applicable app-store license. The app and its branding remain the property of their respective owners.
 
@@ -16,17 +16,19 @@ You retain your rights in content you create or import. You are responsible for 
 
 Use only the information needed for your work, protect access to your device and exports, and apply appropriate retention and deletion practices. Classling does not independently establish your authority to handle educational records or certify your institution's compliance with a particular law.
 
-You authorize only the processing needed to operate the features you use, including local processing and transfers to backup providers or recipients you choose. You do not transfer ownership of your records to the developer.
+You authorize only the processing needed to operate the features you use, including local processing and transfers to sync or backup providers and recipients you choose. You do not transfer ownership of your records to the developer.
 
 ## Calculations and imports
 
 Review imported data, student matches, grades, calculations, attendance and reports before relying on or sharing them. Results depend on the information and grading settings you supply and may contain errors. Classling is an organizational tool; you remain responsible for educational decisions and official records.
 
-## Storage and backups
+## Storage, sync and backups
 
-Core classroom data is stored locally unless you choose to export, share or enable backups. Keep independent backups of important records. Uninstalling, clearing app data, device failure, accidental deletion or operating-system behavior may cause data loss.
+Core classroom data is stored locally unless you choose to export, share or enable sync or backups. Keep independent backups of important records. Uninstalling, clearing app data, device failure, accidental deletion or operating-system behavior may cause data loss.
 
 Optional Google Drive and document-provider backups depend on connectivity, authorization, storage, provider availability and compatible app versions. They are not a guarantee of continuous synchronization or recovery. Restoring a backup can replace existing records, as described in the app's confirmation. Exported backups are not encrypted by Classling; anyone with access to an unprotected file may be able to read it.
+
+Optional Google Drive sync shares saved classroom records and changes, including deletions, with devices connected to the same library. It runs while the app is open and requires connectivity, authorization, compatible versions and applicable Premium access. Concurrent edits may need your review. Sync files are not encrypted by Classling and may retain historical edits and deletion markers. Disconnecting stops transfers from that device; it does not delete cloud records. Sync is not an independent backup or a guarantee of immediate consistency or recovery.
 
 ## Premium and purchases
 
@@ -48,7 +50,7 @@ Do not use Classling unlawfully or infringe others' privacy or intellectual-prop
 
 ## Privacy
 
-The [Classling Privacy Policy](classling-privacy-policy.md) describes local records, optional backups, purchases, support and your choices.
+The [Classling Privacy Policy](classling-privacy-policy.md) describes local records, optional sync and backups, purchases, website hosting, support and your choices.
 
 ## Availability and liability
 
