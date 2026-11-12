@@ -1,6 +1,6 @@
 # Classling Privacy Policy
 
-Last updated: November 11, 2026
+Last updated: November 12, 2026
 
 Classling (also known as Class Ledger) is a classroom management app provided by Vinsho. This policy explains how the app handles information. Features may vary by platform and version.
 
@@ -18,7 +18,7 @@ Backups are not encrypted by Classling and can include archived records, private
 
 ## Optional backups
 
-On Android, you can connect Google Drive to save backups in an app-managed folder in your Drive. Classling uses Google Sign-In and the limited `drive.file` permission to work with files it creates or that you authorize for the app; it does not request access to all of your Drive files. Google account identifiers and authentication credentials are used to connect the chosen account and authorize backup operations. Google receives the backup contents and ordinary connection information when you use this feature.
+On Android and iOS, you can connect Google Drive to save backups in an app-managed folder in your Drive. Classling uses Google Sign-In and the limited `drive.file` permission to work with files it creates or that you authorize for the app; it does not request access to all of your Drive files. Google account identifiers and authentication credentials are used to connect the chosen account and authorize backup operations. Google receives the backup contents and ordinary connection information when you use this feature.
 
 On iOS, you can select a backup folder through the system document picker, including an iCloud Drive folder. Classling stores access to that selected folder and writes backup files there. The document provider manages any cloud upload; a successful local write does not guarantee that remote synchronization has finished.
 
@@ -28,13 +28,21 @@ Google's processing is covered by the [Google Privacy Policy](https://policies.g
 
 ## Optional Google Drive sync
 
-On Android, you can connect Google Drive to sync saved classroom records between devices. Sync uses Google Sign-In and the limited `drive.appdata` permission to read and write Classling's hidden app-data storage. It does not read your other Drive documents. Sync is separate from the backup feature above.
+On Android and iOS, you can connect Google Drive to sync saved classroom records between devices. Sync uses Google Sign-In and the limited `drive.appdata` permission to read and write Classling's hidden app-data storage. It does not read your other Drive documents. Sync is separate from the backup feature above.
 
 When enabled, sync transfers classes, students, student photos and custom fields, grades, attendance, groups, seating plans, schedules, lesson plans, notes, attached files, rubrics and templates to the selected Google account. Account identifiers and credentials authorize the connection; enrollment credentials stay in platform secure storage. Google receives these records and ordinary connection information. Changes, including deletions, sync while Classling is open; offline work waits for a later connection. Devices connected to the same library can receive the shared records.
 
 Sync files are compressed, not encrypted by Classling. Transfers use HTTPS and access is protected by Google account permissions; there is no separate recovery password. Historical edits and deletion markers can remain in sync files to support reconciliation and recovery from interrupted transfers. A deletion hides the current record on connected devices but does not immediately erase every historical copy. Pausing or disconnecting stops this device's transfers without deleting local or cloud records. Cloud data can be managed through Google Drive's app-data controls.
 
 Google user data is used only for the backup and sync features you authorize, not for advertising or sale. The Google API Services User Data Policy, including its Limited Use requirements, applies to these uses.
+
+## Optional iCloud sync
+
+Instead of Google Drive, you can connect iCloud to sync the same classroom records between devices. Only one sync service is active for a library at a time. Sync stores records in Classling's container in your private iCloud database. The developer cannot access your private iCloud data.
+
+On iPhone and iPad, sync uses the Apple Account signed in on the device. On Android, you sign in to your Apple Account in a browser page provided by Apple; Classling receives a web access token for its iCloud container and keeps it in platform secure storage. Apple receives the synced records and ordinary connection information.
+
+Sync data is compressed, not encrypted by Classling; Apple's iCloud account protections and transport security apply. As with Google Drive sync, historical edits and deletion markers can remain to support reconciliation, and pausing or disconnecting does not delete local or iCloud records. On iPhone or iPad, you can delete Classling's iCloud data in Settings under your Apple Account, iCloud storage. Apple's processing is covered by the [Apple Privacy Policy](https://www.apple.com/legal/privacy/).
 
 ## Purchases
 
@@ -44,7 +52,7 @@ Classling does not send student names, grades, notes, photos or other classroom 
 
 ## Advertising, analytics and support
 
-Classling does not serve advertisements. Android release builds use Google Analytics for Firebase to understand app usage (such as screen visits and purchase actions) and Firebase Crashlytics to diagnose crashes and errors. These services process app-instance or installation identifiers, app and device information, usage events, approximate location derived from masked IP addresses, and technical diagnostics. Advertising identifier collection and advertising personalization are disabled. Debug and isolated QA builds do not enable this reporting.
+Classling does not serve advertisements. iOS builds do not include analytics or crash-reporting services. Android release builds use Google Analytics for Firebase to understand app usage (such as screen visits and purchase actions) and Firebase Crashlytics to diagnose crashes and errors. These services process app-instance or installation identifiers, app and device information, usage events, approximate location derived from masked IP addresses, and technical diagnostics. Advertising identifier collection and advertising personalization are disabled. Debug and isolated QA builds do not enable this reporting.
 
 Classling does not attach student names, classroom identifiers, grades, notes, photos, imported files or account details to analytics events or app-reported errors. Screen events use fixed route templates. App-reported errors include the error type and stack trace; free-text exception messages and contextual record values are removed. Firebase may also collect native crash diagnostics and basic device information. The class analytics feature calculates classroom statistics locally. See [Firebase privacy information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
