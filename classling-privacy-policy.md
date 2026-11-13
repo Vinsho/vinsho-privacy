@@ -1,6 +1,6 @@
 # Classling Privacy Policy
 
-Last updated: November 12, 2026
+Last updated: November 13, 2026
 
 Classling (also known as Class Ledger) is a classroom management app provided by Vinsho. This policy explains how the app handles information. Features may vary by platform and version.
 
@@ -52,7 +52,7 @@ Classling does not send student names, grades, notes, photos or other classroom 
 
 ## Advertising, analytics and support
 
-Classling does not serve advertisements. iOS builds do not include analytics or crash-reporting services. Android release builds use Google Analytics for Firebase to understand app usage (such as screen visits and purchase actions) and Firebase Crashlytics to diagnose crashes and errors. These services process app-instance or installation identifiers, app and device information, usage events, approximate location derived from masked IP addresses, and technical diagnostics. Advertising identifier collection and advertising personalization are disabled. Debug and isolated QA builds do not enable this reporting.
+Classling does not serve advertisements. Android and iOS release builds use Google Analytics for Firebase to understand app usage (such as screen visits, first opens and purchase actions) and Firebase Crashlytics to diagnose crashes and errors. Successful purchase events include the product identifier, price and currency. These services process app-instance or installation identifiers, app and device information, usage events, approximate location derived from masked IP addresses, and technical diagnostics. Advertising identifier collection and advertising personalization are disabled. Debug and isolated QA builds do not enable this reporting.
 
 Classling does not attach student names, classroom identifiers, grades, notes, photos, imported files or account details to analytics events or app-reported errors. Screen events use fixed route templates. App-reported errors include the error type and stack trace; free-text exception messages and contextual record values are removed. Firebase may also collect native crash diagnostics and basic device information. The class analytics feature calculates classroom statistics locally. See [Firebase privacy information](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
